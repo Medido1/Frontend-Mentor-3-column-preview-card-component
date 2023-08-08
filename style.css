@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+ /*  ## Colors */
+
+/* ### Primary */
+
+  --Bright_orange: hsl(31, 77%, 52%);
+  --Dark_cyan: hsl(184, 100%, 22%);
+  --Very_dark_cyan: hsl(179, 100%, 13%);
+
+  /* ### Neutral */
+
+  --Transparent-white : hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+  --Very_light_gray : hsl(0, 0%, 95%); /* (background, headings, buttons) */
+
+  /* font family */
+  --main_font:'Lexend Deca', sans-serif;
+  --secondary_font: 'Big Shoulders Display', cursive;
+
+  /* font weight */
+  --regular : 400;
+  --bold : 700;
+
+  /* font size */
+
+  --font-size : 0.938rem;
+}
+
+/* css reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* Utilities */
+
+.icon {
+  width: 70px;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
+/* attribution styling */
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+/* preview styling */
+
+.main {
+  font-family: var(--main_font);
+  font-weight: var(--regular);
+  color: var(--Transparent-white);
+  font-size: var(--font-size);
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 900px;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: 2.5rem;
+}
+
+.column_title {
+  font-family: var(--secondary_font);
+  font-weight: var(--bold);
+  text-transform: uppercase;
+  color: var(--Very_light_gray);
+  font-size: 2.25rem;
+  margin-top: 1rem;
+}
+
+.sedan_column {
+  background-color: var(--Bright_orange);
+}
+
+.sedan_column .btn {
+  color: var(--Bright_orange);
+}
+
+.suvs_column {
+  background-color: var(--Dark_cyan);
+}
+
+.suvs_column .btn {
+  color: var(--Dark_cyan);
+}
+
+.luxury_column {
+  background-color: var(--Very_dark_cyan);
+}
+
+.luxury_column .btn {
+  color: var(--Very_dark_cyan);
+}
+
+.btn {
+  align-self: flex-start;
+  border-radius: 100vmax;
+  background-color: var(--Very_light_gray);
+  border: 1px solid var(--Very_light_gray);
+  font-weight: var(--bold);
+  font-size: inherit;
+  padding: 1rem 1.5rem;
+  margin-top: .5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid var(--Very_light_gray);
+  color: var(--Very_light_gray);
+  background-color: inherit;
+}
+
+/* Desktop design */
+
+@media (min-width : 750px){
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container {
+    display: flex;
+  }
+  .column {
+    width: 33.3%;
+  }
+  .column p {
+    margin: 1rem 0 4rem 0;
+  }
+  .footer {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
