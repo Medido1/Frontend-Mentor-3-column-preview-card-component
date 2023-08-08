@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution]()
-- Live Site URL: [live site]()
+- Solution URL: [solution](https://github.com/Medido1/Frontend-Mentor-3-column-preview-card-component)
+- Live Site URL: [live site](https://medido1.github.io/Frontend-Mentor-3-column-preview-card-component/)
 
 ## My process
 
